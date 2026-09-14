@@ -27,12 +27,21 @@ namespace NZWalks.API.Controllers
     [HttpPost]
     public async Task<IActionResult> Add([FromBody] AddWalkRequestDto addWalkRequestDto)
     {
-      //Convert DTO to Domain model
-      var walkDomainModel = mapper.Map<Walk>(addWalkRequestDto);
-      //Pass details to Repository
-      walkDomainModel = await walkRepository.CreateAsync(walkDomainModel);
-      //Convert Domain model back to DTO
-      return Ok(mapper.Map<WalkDto>(walkDomainModel));
+      if (ModelState.IsValid)
+      {
+        //Convert DTO to Domain model
+        var walkDomainModel = mapper.Map<Walk>(addWalkRequestDto);
+        //Pass details to Repository
+        walkDomainModel = await walkRepository.CreateAsync(walkDomainModel);
+        //Convert Domain model back to DTO
+        return Ok(mapper.Map<WalkDto>(walkDomainModel));
+      }
+      else
+      {
+        return BadRequest(ModelState);
+      }
+
+
 
     }
 
@@ -63,17 +72,23 @@ namespace NZWalks.API.Controllers
     [HttpPut("{id}")]
     public async Task<IActionResult> Update(Guid id, [FromBody] UpdateWalkRequestDto updateWalkRequestDto)
     {
-      //Convert DTO to Domain model
-      var walkDomainModel = mapper.Map<Walk>(updateWalkRequestDto);
-      //Pass details to Repository - Get Domain model in response
-      walkDomainModel = await walkRepository.UpdateAsync(id, walkDomainModel);
-      if (walkDomainModel == null)
+      if (ModelState.IsValid)
       {
-        return NotFound();
+        //Convert DTO to Domain model
+        var walkDomainModel = mapper.Map<Walk>(updateWalkRequestDto);
+        //Pass details to Repository - Get Domain model in response
+        walkDomainModel = await walkRepository.UpdateAsync(id, walkDomainModel);
+        if (walkDomainModel == null)
+        {
+          return NotFound();
+        }
+        //Convert Domain model back to DTO
+        return Ok(mapper.Map<WalkDto>(walkDomainModel));
       }
-      //Convert Domain model back to DTO
-      return Ok(mapper.Map<WalkDto>(walkDomainModel));
-
+      else
+      {
+               return BadRequest(ModelState);
+      }
     }
 
     //DELTE: /api/walks/{id}
