@@ -1,0 +1,28 @@
+2026-09-18 10:55:58.133 +01:00 [INF] User profile is available. Using 'C:\Users\cotrim_j1\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-09-18 10:55:58.866 +01:00 [INF] Now listening on: https://localhost:7265
+2026-09-18 10:55:58.869 +01:00 [INF] Now listening on: http://localhost:5017
+2026-09-18 10:55:59.181 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-09-18 10:55:59.184 +01:00 [INF] Hosting environment: Development
+2026-09-18 10:55:59.187 +01:00 [INF] Content root path: C:\Users\cotrim_j1\source\repos\NZWalks\NZWalks.API
+2026-09-18 10:56:00.839 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7265/swagger/index.html - null null
+2026-09-18 10:56:01.264 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7265/swagger/index.html - 200 null text/html;charset=utf-8 453.2985ms
+2026-09-18 10:56:01.320 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7265/_framework/aspnetcore-browser-refresh.js - null null
+2026-09-18 10:56:01.320 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7265/_vs/browserLink - null null
+2026-09-18 10:56:01.349 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7265/_framework/aspnetcore-browser-refresh.js - 200 13758 application/javascript; charset=utf-8 29.6738ms
+2026-09-18 10:56:01.546 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7265/_vs/browserLink - 200 null text/javascript; charset=UTF-8 225.5392ms
+2026-09-18 10:56:01.584 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7265/swagger/v1/swagger.json - null null
+2026-09-18 10:56:01.615 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7265/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 32.0979ms
+2026-09-18 13:39:05.975 +01:00 [INF] User profile is available. Using 'C:\Users\cotrim_j1\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-09-18 13:39:07.307 +01:00 [INF] Now listening on: https://localhost:7265
+2026-09-18 13:39:07.312 +01:00 [INF] Now listening on: http://localhost:5017
+2026-09-18 13:39:07.616 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-09-18 13:39:07.625 +01:00 [INF] Hosting environment: Development
+2026-09-18 13:39:07.640 +01:00 [INF] Content root path: C:\Users\cotrim_j1\source\repos\NZWalks\NZWalks.API
+2026-09-18 13:39:09.025 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7265/swagger/index.html - null null
+2026-09-18 13:39:09.475 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7265/_vs/browserLink - null null
+2026-09-18 13:39:09.483 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7265/_framework/aspnetcore-browser-refresh.js - null null
+2026-09-18 13:39:09.493 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7265/swagger/index.html - 200 null text/html;charset=utf-8 491.8934ms
+2026-09-18 13:39:09.526 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7265/_framework/aspnetcore-browser-refresh.js - 200 13758 application/javascript; charset=utf-8 50.2766ms
+2026-09-18 13:39:09.593 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7265/_vs/browserLink - 200 null text/javascript; charset=UTF-8 118.0164ms
+2026-09-18 13:39:09.645 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7265/swagger/v1/swagger.json - null null
+2026-09-18 13:39:09.676 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7265/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 31.1954ms

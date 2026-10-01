@@ -5,13 +5,14 @@ namespace NZWalks.API.Data
 {
   public class NZWalksDbContext : DbContext
   {
-    public NZWalksDbContext(DbContextOptions dbContextOptions) : base(dbContextOptions)
+    public NZWalksDbContext(DbContextOptions<NZWalksDbContext> dbContextOptions) : base(dbContextOptions)
     {
 
     }
     public DbSet<Region> Regions { get; set; }
     public DbSet<Difficulty> Difficulties { get; set; }
     public DbSet<Walk> Walks { get; set; }
+    public DbSet<Image> Images { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -22,21 +23,21 @@ namespace NZWalks.API.Data
 
       var difficulties = new List<Difficulty>()
       {
-        new Difficulty()
-        {
-          Id = Guid.Parse("b1f3c8e0-1c2b-4d5a-9f3e-1a2b3c4d5e6f"),
-          Name = "Easy"
-        },
-        new Difficulty()
-        {
-          Id = Guid.Parse("c2d4e5f6-7a8b-9c0d-1e2f-3a4b5c6d7e8f"),
-          Name = "Medium"
-        },
-        new Difficulty()
-        {
-          Id = Guid.Parse("d3e4f5g6-8h9i-0j1k-2l3m-4n5o6p7q8r9s"),
-          Name = "Hard"
-        }
+          new Difficulty()
+          {
+              Id = Guid.Parse("b1f3c8e0-1c2b-4d5a-9f3e-1a2b3c4d5e6f"),
+              Name = "Easy"
+          },
+          new Difficulty()
+          {
+              Id = Guid.Parse("c2d4e5f6-7a8b-9c0d-1e2f-3a4b5c6d7e8f"),
+              Name = "Medium"
+          },
+          new Difficulty()
+          {
+              Id = Guid.Parse("8b3a2d2c-7f5a-4f4d-9d24-5e4a31d4d4b3"),
+              Name = "Hard"
+          }
       };
       //Seed difficulties to the database
       modelBuilder.Entity<Difficulty>().HasData(difficulties);
